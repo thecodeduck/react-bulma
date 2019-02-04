@@ -25,9 +25,12 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-
-@import "../../node_modules/bulma/bulma.sass";
-
 .input {
 	width: auto;
 }
+
+.select {
+	margin-left: 10px;
+}
+
+@import "../../node_modules/bulma/bulma.sass";

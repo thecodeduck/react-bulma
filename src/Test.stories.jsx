@@ -7,8 +7,6 @@ import {
 } from './';
 
 import './_sass/styles.scss';
-import './css/styles.css';
-import './css/main.css';
 
 const AdvanceFilterButtonStyle = {
 	paddingLeft: '0px',
