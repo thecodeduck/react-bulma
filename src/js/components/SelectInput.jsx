@@ -35,6 +35,7 @@ class ControlledSelectInput extends React.Component {
 			onChange,
 			ariaLabel,
 			size,
+			multiple,
 			required,
 			options,
 		} = this.props;
@@ -48,6 +49,7 @@ class ControlledSelectInput extends React.Component {
 					onChange={this.onChangeWrapper}
 					aria-label={ariaLabel}
 					size={size}
+					multiple={multiple}
 					required={required}
 					>
 					{options.map((opt) => {
@@ -60,15 +62,16 @@ class ControlledSelectInput extends React.Component {
 }
 
 ControlledSelectInput.propTypes = {
-	name: PropTypes.string,
+	name: PropTypes.string.required,
 	selectClass: PropTypes.string,
 	disabled: PropTypes.bool,
 	htmlID: PropTypes.string,
 	onChange: PropTypes.func,
 	ariaLabel: PropTypes.string,
 	size: PropTypes.string,
+	multiple: PropTypes.bool,
 	required: PropTypes.bool,
-	options: PropTypes.arrayOf(PropTypes.string),
+	options: PropTypes.arrayOf(PropTypes.string).required,
 };
 
 ControlledSelectInput.defaultProps = {
